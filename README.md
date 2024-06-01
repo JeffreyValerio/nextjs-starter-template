@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ⭐ Configuración inicial
 
-## Getting Started
+## 💻 Ejecutar projecto en desarrollo
 
-First, run the development server:
+1. Clonar el repositorio
+2. Copiar las variables del `.env.example` y crear el archivo `.env.local`.
+3. Instalar las dependencias
 
 ```bash
-npm run dev
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Levantar la base de datos con el comando:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+node docker-compose.yml
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Ejecutar las migraciones de Prisma
 
-## Learn More
+```bash
+npx prisma migrate dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Ejecutar el Seed para agregar los usuarios y/o data de prueba
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run seed
+#or
+yarn seed
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+7. Iniciar el proyecto de NextJS
 
-## Deploy on Vercel
+```bash
+npm run
+#or
+yarn dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+8. Abrir [http://localhost:3000](http://localhost:3000) para ver el proyecto inicial
+> **Nota**: se recomienda limpiar el `localstorage` para borrar cualquier dato anterior.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Configuración para SEO
+
+1. Modificar los datos del archivo `manifest.ts`
+
+# Configuración de NextAuth
+
+1. Crear la variable `NEXTAUTH_SECRET` abriendo la terminal con el comando:
+
+```sh
+ openssl rand -base64 32
+```
+## 💻 Ejecutar proyecto en Producción con ▲ VERCEL
+
+## Este template incluye
+
+- [x] SEO optimization
