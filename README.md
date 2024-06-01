@@ -1,13 +1,13 @@
-# ⭐ Configuración inicial
+# **▲ NextJS** Starter Template 
 
-## 💻 Ejecutar projecto en desarrollo
+## 💻 Ejecutar proyecto en Desarrollo
 
 1. Clonar el repositorio
 2. Copiar las variables del `.env.example` y crear el archivo `.env.local`.
 3. Instalar las dependencias
 
 ```bash
-npm install
+npm install 
 # or
 yarn install
 ```
@@ -49,7 +49,7 @@ yarn dev
 
 # Configuración de NextAuth
 
-1. Crear la variable `NEXTAUTH_SECRET` abriendo la terminal con el comando:
+1. Crear la variable `NEXTAUTH_SECRET` ejecutando el comando:
 
 ```sh
  openssl rand -base64 32
@@ -59,3 +59,16 @@ yarn dev
 ## Este template incluye
 
 - [x] SEO optimization
+
+### Dependecias instaladas
+- [x] `bcryptjs`
+- [x] `cloudinary`
+- [x] `framer-motion`
+- [x] `next-auth`
+- [x] `prisma`
+- [x] `react-hook-form`
+- [x] `shadcn-ui`
+- [x] `slugify`
+- [x] `swiper`
+- [x] `ts-node`
+- [x] `zod`
