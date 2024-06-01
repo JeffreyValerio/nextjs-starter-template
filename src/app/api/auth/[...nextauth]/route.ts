@@ -16,7 +16,12 @@ export const handler = NextAuth({
           placeholder: "******",
         },
       },
-      async authorize(credentials: any) {
+      async authorize(
+        credentials: Record<"email" | "password", string> | undefined
+      ) {
+        if (!credentials) {
+          throw new Error("Credentials are not provided");
+        }
         const userFound = await prisma.user.findUnique({
           where: { email: credentials.email },
         });
