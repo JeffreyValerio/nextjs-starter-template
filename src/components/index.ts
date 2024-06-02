@@ -5,3 +5,4 @@ export * from "@/components/header/Header";
 export * from "@/components/providers/Providers";
 export * from "@/components/sections/Hero";
 export * from "@/components/shared/theme-provider";
+export * from "@/components/shared/Logo";
