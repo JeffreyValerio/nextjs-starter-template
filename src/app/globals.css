@@ -73,6 +73,6 @@
     @apply bg-background text-foreground;
   }
   .max-width {
-    @apply max-w-7xl mx-auto px-4;
+    @apply max-w-7xl mx-auto px-10;
   }
 }

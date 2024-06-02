@@ -2,7 +2,7 @@ import { Hero } from "@/components";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="relative">
       <Hero />
     </div>
   );
